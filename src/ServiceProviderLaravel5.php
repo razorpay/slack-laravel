@@ -37,7 +37,7 @@ class ServiceProviderLaravel5 extends \Illuminate\Support\ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/config/config.php', 'slack');
 
-        $this->app->singleton('slack', function ($app) {
+        $this->app->singleton('razorpay.slack', function ($app) {
             $slack = new Client(
                 $app['config']->get('slack.endpoint'),
                 [
