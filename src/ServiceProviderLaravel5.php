@@ -49,7 +49,7 @@ class ServiceProviderLaravel5 extends \Illuminate\Support\ServiceProvider
                     'unfurl_media'            => $app['config']->get('slack.defaults.unfurl_media'),
                     'allow_markdown'          => $app['config']->get('slack.defaults.allow_markdown'),
                     'markdown_in_attachments' => $app['config']->get('slack.defaults.markdown_in_attachments'),
-                    'is_slack_enabled'        => $app['config']->get('slack.defaults.is_slack_enabled'),
+                    'is_slack_enabled'        => $app['config']->get('slack.is_slack_enabled'),
                 ],
                 $this->getQueue($app['config']->get('slack.defaults.queue')),
                 new Guzzle
