@@ -86,6 +86,8 @@ class ServiceProviderLaravel5 extends \Illuminate\Support\ServiceProvider
 
                 return $slack;
             });
+
+            $this->app->bind('Razorpay\Slack\Client', 'slack-' . $name);
         }
 
         $this->app->bind('Razorpay\Slack\Client', 'slack');
