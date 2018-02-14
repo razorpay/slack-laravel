@@ -58,7 +58,7 @@ class ServiceProviderLaravel5 extends \Illuminate\Support\ServiceProvider
             return $slack;
         });
 
-        $clientConfigs = $this->app['config']['clients'];
+        $clientConfigs = $this->app['config']['slack']['clients'];
 
         foreach ($clientConfigs as $name  => $config)
         {
