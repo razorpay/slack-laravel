@@ -3,6 +3,10 @@
 return [
     'is_slack_enabled' => true,
 
+    /**
+     * Configuration for default slack client. Client with default configuration will be available with
+     * the name 'slack' in the container.
+     */
     'defaults'  =>  [
         /*
         |-------------------------------------------------------------
@@ -126,5 +130,15 @@ return [
         'queue' => null,
     ],
 
-    'clients'   =>  [],
+    // A list of additional slack clients
+    'clients'   =>  [
+
+        /**
+         * A Slack client with below configuration will be available with name 'slack-client1' in the container.
+         * Missing values will be taken from defaults array.
+         */
+        'client1'   =>  [
+            'endpoint'  =>  ''
+        ]
+    ],
 ];
