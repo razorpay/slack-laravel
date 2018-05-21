@@ -24,5 +24,15 @@
             "Razorpay\\Slack\\Laravel\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Razorpay\\Slack\\Laravel\\ServiceProviderLaravel5"
+            ],
+            "aliases": [
+                "Razorpay\\Slack\\Laravel\\Facade"
+            ]
+        }
+    },
     "minimum-stability": "stable"
 }
