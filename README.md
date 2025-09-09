@@ -16,7 +16,13 @@ composer require razorpay/slack-laravel
 
 Then [create an incoming webhook](https://my.slack.com/services/new/incoming-webhook) for each Slack team you'd like to send messages to. You'll need the webhook URL(s) in order to configure this package.
 
+## Laravel 5.5+
+
+If using Laravel version 5.5 or higher, this package will be automatically discovered by the Framework. No need to register the provider or Alias! Just run `php artisan vendor:publish` to publish the config file to `config/slack.php`.
+
 ## Laravel 5
+
+If you are using Laravel between 5.0 and 5.4, you will need to register the provider and alias as usual.
 
 Add the `Razorpay\Slack\Laravel\ServiceProvider` provider to the `providers` array in `config/app.php`:
 
